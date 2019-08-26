@@ -34,3 +34,13 @@ $weekday = ‘Воскресение’;
 }
 
 ?>
+
+
+<body>
+  <div class = ‘img’ style "background-image: url(<?= $img; ?>)">
+    <h1> <?=$greetings?> 
+      <?= ‘<p> Сегодня $weekday</p>’;?> 
+    </h1>
+  </div>
+</body>
+</html>
