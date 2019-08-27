@@ -2,7 +2,7 @@
 $data = $_POST;
 $codeWord = 'nd82jaake';
 if (preg_match('/\W/', $data['login'])) {
-    echo 'Поле логин не должно содержать символы @/*?,;:.';
+  echo 'Поле логин не должно содержать символы @/*?,;:.';  
 } elseif (!$data['login']) {
     echo 'Поле логин обязательно к заполнению';
 } elseif (strlen($data['password']) < 8) {
@@ -14,6 +14,6 @@ if (preg_match('/\W/', $data['login'])) {
 } elseif ($codeWord !== $data['code']) {
     echo 'Неверно введено кодовое слово';
 } else {
-    echo 'У вас все хорошо!:)';
+    echo 'У вас все хорошо!';
 };
 
