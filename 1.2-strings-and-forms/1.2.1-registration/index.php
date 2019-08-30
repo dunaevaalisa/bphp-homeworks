@@ -1,7 +1,7 @@
 <?php
 $data = $_POST;
 $codeWord = 'nd82jaake';
-if (preg_match('/\W/', $data['login'])) {
+if (preg_match("/[@\/\*\?,;:]/", $data['login'])) {
   echo 'Поле логин не должно содержать символы @/*?,;:.';  
 } elseif (!$data['login']) {
     echo 'Поле логин обязательно к заполнению';
@@ -9,7 +9,7 @@ if (preg_match('/\W/', $data['login'])) {
     echo 'Длина пароля должна быть минимум 8 символов';
 } elseif (preg_match('/^\w+@[a-zA-Z]+\.[a-zA-Z]+$/', trim($data['email'])) === 0) {
     echo 'Неверный формат почтового адреса';
-} elseif (('/\W/', !$data['firstName'] || ('/\W/', !$data['lastName'] || ('/\W/', !$data['middleName']) {
+} elseif (strlen(trim($data['firstName'])) === 0 && strlen(trim($data['lastName'])) === 0 && strlen(trim($data['middleName'])) === 0) {
     echo 'ФИО обязательно к заполнению';
 } elseif ($codeWord !== $data['code']) {
     echo 'Неверно введено кодовое слово';
