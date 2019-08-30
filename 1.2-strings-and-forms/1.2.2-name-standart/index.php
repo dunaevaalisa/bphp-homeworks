@@ -18,7 +18,7 @@ $surnameAndInitials = $lastName . ' ' . mb_substr($firstName, 0, 1) . '.' . mb_s
     <title>index.php</title>
 </head>
 <body>
-    <?="<p>Полное имя: '$fullname'</p>";?>
+    <?="<p>Полное имя: '$fullName'</p>";?>
     <?="<p>Фамилия и инициалы: '$surnameAndInitials'</p>";?>
     <?="<p>Аббревиатура: '$fio'</p>";?>
 </body>
