@@ -1,6 +1,5 @@
 <?php
 require 'uploadToDir.php';
-require 'deleteFile.php';
 ?>
 
 
@@ -17,10 +16,7 @@ require 'deleteFile.php';
         <input type="file" name="picture">
         <input type="submit" value="Отправить" name="upload">
     </form>
-    <form action="" method="post">
-        File Name: <input type="text" name="fileToDelete">
-        <input type="submit" value="Удалить" name="delete">
-    </form>
+   
     <div>
     
         <?php 
