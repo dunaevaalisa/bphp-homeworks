@@ -7,7 +7,7 @@ $reverve = reserve($map, $requiredRow, $requiredPlace);
 logReserve($requiredRow, $requiredPlace, $reverve);
 function generate($rows, $placesPerRow, $avaliableCount) 
 {
-    if ($avaliableCount > ($row * $placesPerRow)) return false;
+    if ($avaliableCount < ($rows * $placesPerRow)) return false;
     
     $seatMap = [];
     $seatCount = 0;
