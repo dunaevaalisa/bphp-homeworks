@@ -1,10 +1,10 @@
 <?php
-$uploadsDir = __DIR__ . '/uploads/';
+$uploadsFile = __FILE__ . '/uploads/';
 $fileName = 'picture';
 if(isset($_POST['upload'])) {
-    uploadFileToDir($uploadsDir, $fileName);
+    uploadFile($uploadsFile, $fileName);
 };
-function uploadFileToDir($uploadsDir='', $fileName='') 
+function uploadFile($uploadsFile='', $fileName='') 
 {
     $extType = [
         'gif', 
@@ -22,7 +22,7 @@ function uploadFileToDir($uploadsDir='', $fileName='')
             if (in_array($pathParts['extension'], $extType)) {
                 return move_uploaded_file(
                     $tmpName,
-                    $uploadsDir.$pathParts['basename']
+                    $uploadsFile.$pathParts['basename']
                 );
             };
         };
