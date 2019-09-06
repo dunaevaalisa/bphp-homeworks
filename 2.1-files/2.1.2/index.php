@@ -20,12 +20,12 @@ require 'uploadToDir.php';
     <div>
     
         <?php 
-        if(is_dir($uploadsDir)) {
-            $files = scandir($uploadsDir);
+        if(is_dir($uploadsFile)) {
+            $files = scandir($uploadsFile);
             foreach ($files as $key => $file) 
             {
                 if ($file === '.' || $file === '..') continue;
-                $src = str_replace($_SERVER['DOCUMENT_ROOT'], '', $uploadsDir);
+                $src = str_replace($_SERVER['DOCUMENT_ROOT'], '', $uploadsFile);
                 echo "<img src=\"$src$file\" alt=\"pic\" width=\"300px\"><br>";
                 
             };
