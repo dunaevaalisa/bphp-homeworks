@@ -1,5 +1,5 @@
 <?php
-$uploadsFile = __FILE__ . '/uploads/';
+$uploadsFile =  'uploads/';
 $fileName = 'picture';
 if(isset($_POST['upload'])) {
     uploadFile($uploadsFile, $fileName);
